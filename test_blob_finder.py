@@ -3,18 +3,8 @@ import blob_finder
 import os
 import tempfile
 
-"""
-TEST#2
-
-"""
 
 class TestBlobFinder(unittest.TestCase):
-    """
-    TEST#1
-    a) Write sample data to a temporary file
-    b) Parse with the parse_blob_file function
-    c) Call find_blobs on the data and test the result for expected output.
-    """
     def test_blob_counter(self):
         with tempfile.TemporaryFile('w+') as tmp:
             tmp.write("X X X X\n"
@@ -45,6 +35,7 @@ class TestBlobFinder(unittest.TestCase):
             tmp.seek(0)
             blob_size = blob_finder.blob_counter(blob_2D, "O", 3, 0, 0)
             self.assertEqual(blob_size, 4)
+
 
     def test_find_max_blob(self):
         with tempfile.TemporaryFile('w+') as tmp:

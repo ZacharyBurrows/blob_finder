@@ -1,6 +1,7 @@
 from sys import argv
 
 
+
 def main(argv):
     blob_elements = ["X", "O"]
 
